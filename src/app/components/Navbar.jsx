@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Menu = (props) => {
+const Navbar = (props) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid justify-content-center">
@@ -10,4 +10,4 @@ const Menu = (props) => {
   )
 }
 
-export default Menu;
+export default Navbar;
