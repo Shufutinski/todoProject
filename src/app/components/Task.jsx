@@ -1,15 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const Task = () => {
+const Task = (props) => {
+  const [isDone, setIsDone] = useState(false)
+
+  const {id, title, completed} = props;
+
+  const handleClick = () => {
+    setIsDone(!isDone);
+  }
+
   return (
     <>
-        <div className="card m-4">
-            <div className="card-body">
-                <h4 className="card-title">John Doe</h4>
-                <p className="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-                <a href="#" className="btn btn-primary">See Profile</a>
-            </div>
+      <div className={isDone ? "card m-4 text-decoration-line-through text-muted" : "card m-4"}>
+        <h4 className="card-header">{id}</h4>
+        <div className="card-body">
+          <p className="card-text">{title}</p>
+          <a onClick={handleClick} className={isDone ? 'btn btn-success' : 'btn btn-danger'} >{isDone ? 'You solved it' : 'Task in progress'}</a>
         </div>
+      </div>
     </>
   )
 }
