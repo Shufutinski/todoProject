@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import TasksList from '../components/TasksList';
-import { Modal, Button, ModalHeader, ModalTitle, ModalBody, ModalFooter } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import ModalWindow from '../components/ModalWindow';
 
 
